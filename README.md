@@ -16,7 +16,7 @@ Also required are [numba](http://numba.pydata.org/numba-doc/latest/user/installi
 # Usage
 
 To generate Mask-RCNN results:
-```python write_mrcnn_results.py LIDAR_AND_IMAGES.bag```
+```python write_mrcnn_results.py PATH_TO_LIDAR_AND_IMAGES_ROSBAG.bag```
 
 Rosbag with Mask-RCNN results will be written to `mrcnn.bag`
 
@@ -25,4 +25,7 @@ To generate LDLS results:
 
 Rosbag with LDLS results will be written to `ldls.bag`
 
+The `image_topic` variable in `write_mrccn_bag.py` and the  `lidar_topic` variable in `write_ldls_bag.py` should be changed to the correct image and Velodyne/lidar topic names for your rosbag data.
+
 Please see the msg/Segmentation.msg file for specification of the output Segmentation message type, which includes labeled points for detected object instances.
+
