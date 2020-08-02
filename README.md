@@ -25,7 +25,7 @@ To generate LDLS results:
 
 Rosbag with LDLS results will be written to `ldls.bag`
 
-The `image_topic` variable in `write_mrccn_bag.py` and the  `lidar_topic` variable in `write_ldls_bag.py` should be changed to the correct image and Velodyne/lidar topic names for your rosbag data.
+The `image_topic` variable in `write_mrccn_bag.py` and the  `lidar_topic` variable in `write_ldls_bag.py` should be changed to the correct image and Velodyne/lidar topic names for your rosbag data. Note you'll also need to update the camera intrinsic parameters and camera-lidar calibration parameters to get good results (see lines 94-107 of write_ldls_bag.py)
 
 Please see the msg/Segmentation.msg file for specification of the output Segmentation message type, which includes labeled points for detected object instances.
 
